@@ -250,13 +250,13 @@
             cloud.position = ccp(cloud.position.x + 2 * cloud.contentSize.width, cloud.position.y);
         }
     }*/
-    _parallaxBackground.position = ccp(_parallaxBackground.position.x - (character.physicsBody.velocity.x * delta), _parallaxBackground.position.y);
+    _parallexBackground.position = ccp(_parallexBackground.position.x - (character.physicsBody.velocity.x * delta), _parallexBackground.position.y);
     
     // loop the bushes
     for (CCNode *bush in _bushes)
     {
         // get the world position of the bush
-        CGPoint bushWorldPosition = [_parallaxBackground convertToWorldSpace:bush.position];
+        CGPoint bushWorldPosition = [_parallexBackground convertToWorldSpace:bush.position];
         // get the screen position of the bush
         CGPoint bushScreenPosition = [self convertToNodeSpace:bushWorldPosition];
         
@@ -264,7 +264,7 @@
         // move it to the right
         if (bushScreenPosition.x <= (-1 * bush.contentSize.width))
         {
-            for (CGPointObject *child in _parallaxBackground.parallaxArray)
+            for (CGPointObject *child in _parallexBackground.parallaxArray)
             {
                 if (child.child == bush)
                 {
@@ -278,7 +278,7 @@
     for (CCNode *cloud in _clouds)
     {
         // get the world position of the cloud
-        CGPoint cloudWorldPosition = [_parallaxBackground convertToWorldSpace:cloud.position];
+        CGPoint cloudWorldPosition = [_parallexBackground convertToWorldSpace:cloud.position];
         // get the screen position of the cloud
         CGPoint cloudScreenPosition = [self convertToNodeSpace:cloudWorldPosition];
         
@@ -286,7 +286,7 @@
         // move it to the right
         if (cloudScreenPosition.x <= (-1 * cloud.contentSize.width))
         {
-            for (CGPointObject *child in _parallaxBackground.parallaxArray)
+            for (CGPointObject *child in _parallexBackground.parallaxArray)
             {
                 if (child.child == cloud)
                 {
