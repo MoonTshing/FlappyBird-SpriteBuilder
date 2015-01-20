@@ -224,7 +224,7 @@
         }
     }
     
-   /* //move and loop the bushes
+    //move and loop the bushes
     for( CCNode *bush in _bushes)
     {
         bush.position = ccp(bush.position.x - (character.physicsBody.velocity.x * delta),bush.position.y);
@@ -249,8 +249,8 @@
         {
             cloud.position = ccp(cloud.position.x + 2 * cloud.contentSize.width, cloud.position.y);
         }
-    }*/
-    _parallexBackground.position = ccp(_parallexBackground.position.x - (character.physicsBody.velocity.x * delta), _parallexBackground.position.y);
+    }
+    /*_parallexBackground.position = ccp(_parallexBackground.position.x - (character.physicsBody.velocity.x * delta), _parallexBackground.position.y);
     
     // loop the bushes
     for (CCNode *bush in _bushes)
@@ -294,7 +294,7 @@
                 }
             }
         }
-    }
+    }*/
     
 }
 
