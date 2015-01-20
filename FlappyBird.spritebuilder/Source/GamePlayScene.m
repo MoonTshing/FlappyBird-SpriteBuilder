@@ -17,7 +17,7 @@
 -(void)update:(CCTime)delta
 {
     // put update code here
-    [character flap];
+    
     timeSinceObtacle += delta; //delta is approximately 1/60th of a second
     if(timeSinceObtacle > 2.0f)
     {
